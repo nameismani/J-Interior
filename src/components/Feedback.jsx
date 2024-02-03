@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { IoChatbox } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
 
-export const Feedback = () => {
+ const Feedback = () => {
     const [modal, setModal] = useState(false);
   const [data, setData] = useState({
     name: "",
@@ -100,4 +100,6 @@ export const Feedback = () => {
     </>
   );
 };
+
+export default Feedback
 
