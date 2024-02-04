@@ -5,7 +5,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { FaCaretLeft,FaCaretRight } from "react-icons/fa";
-
+import {motion} from "framer-motion";
+import { fadeIn } from "../../utils/variant";
 import TestimonialItem from "./TestimonialItem";
 
 function SampleNextArrow(props) {
@@ -14,7 +15,7 @@ function SampleNextArrow(props) {
       <div
         className={className}
         onClick={onClick}
-      ><FaCaretRight style={{ ...style, color: "#05435c", fontSize: "30px" }} /></div>
+      ><FaCaretRight style={{ ...style, color: "white", fontSize: "30px" }} /></div>
     );
   }
   
@@ -24,7 +25,7 @@ function SampleNextArrow(props) {
         <div
           className={className}
           onClick={onClick}
-        ><FaCaretLeft style={{ ...style, color: "#05435c", fontSize: "30px" }} /></div>
+        ><FaCaretLeft style={{ ...style, color: "white", fontSize: "30px" }} /></div>
       );
   }
 
@@ -73,12 +74,17 @@ const Testimonial = () => {
   
   return (
     <>
-      <section className=" py-24 bg-gray-50">
+      <section className=" py-24 bg-[#05435c] ">
          <div className=" max-w-[100%] sm:max-w-[90%] mx-auto">
         <div className=" text-center mb-14">
-        <h2 className="text-4xl text-white font-bold capitalize">Hear what our client says</h2>
+        <h2 className="text-xl md:text-3xl text-white font-normal capitalize">Hear what our client says</h2>
         </div>
-        <div>
+        <motion.div
+             variants={fadeIn('up',0.3)}
+             initial="hidden"
+             whileInView={'show'}
+             viewport={{once:true,amount:0.7}}
+        >
      <Slider {...settings}>
      {
     testimonialData.map(item=> (
@@ -86,7 +92,7 @@ const Testimonial = () => {
     ))
    }
      </Slider>
-     </div>
+     </motion.div>
            
          </div>
       </section>

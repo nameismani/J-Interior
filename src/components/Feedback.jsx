@@ -48,7 +48,7 @@ import { MdClose } from "react-icons/md";
   
       <div>
         {modal && (
-          <div className="p-0 fixed left-0 lg:left-8 bottom-24 w-[100%] lg:w-[380px] lg:h-[430px] h-400px border border-solid border-gray-300 bg-white rounded-xl " onSubmit={HandleSubmit}>
+          <div className="p-0 fixed left-0 lg:left-8 z-30 bottom-24 w-[100%] lg:w-[380px] lg:h-[430px] h-400px border border-solid border-gray-300 bg-white rounded-xl " onSubmit={HandleSubmit}>
             {/* <button
               className="close-btn-form"
               onClick={() => setModal((value) => !value)}

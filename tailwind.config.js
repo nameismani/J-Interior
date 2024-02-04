@@ -6,7 +6,13 @@ export default {
     'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        michroma:['Michroma'],
+        roboto:['Roboto'],
+        robotoserif:['Roboto Serif']
+      }
+    },
   },
   plugins: [require('flowbite/plugin'),],
 }
