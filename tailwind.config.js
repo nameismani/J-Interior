@@ -10,7 +10,9 @@ export default {
       fontFamily:{
         michroma:['Michroma'],
         roboto:['Roboto'],
-        robotoserif:['Roboto Serif']
+        robotoserif:['Roboto Serif'],
+        Parisienne:['Parisienne'],
+        Roxborough:['Roxborough']
       }
     },
   },

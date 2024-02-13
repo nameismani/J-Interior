@@ -1,14 +1,14 @@
-import { Button, TextInput,Textarea } from "flowbite-react";
+import { Button, TextInput, Textarea } from "flowbite-react";
 import React, { useState } from "react";
 import { IoChatbox } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
 
- const Feedback = () => {
-    const [modal, setModal] = useState(false);
+const Feedback = () => {
+  const [modal, setModal] = useState(false);
   const [data, setData] = useState({
     name: "",
     email: "",
-    comment: ""
+    comment: "",
   });
 
   const handleChange = (e) => {
@@ -32,23 +32,30 @@ import { MdClose } from "react-icons/md";
   };
   return (
     <>
-     
-   
-        {/* <button
+      {/* <button
           className="fixed bottom-5 left-5 bg-[#4b2aad] w-[56px] h-[56px] cursor-pointer rounded-[50%] text-white flex justify-center items-center text-3xl"
           onClick={() => setModal((value) => !value)}
         >
           <IoChatbox  />
         </button> */}
-        <Button  className="fixed bottom-5 left-5 bg-[#4b2aad] w-[56px] h-[56px] z-30 cursor-pointer rounded-[50%] text-white flex justify-center items-center focus:outline-none " color="#4b2aad" onClick={() => setModal((value) => !value)}>
-        {modal ?  <MdClose  className="text-3xl"/>:<IoChatbox className="text-3xl" />}
+      <Button
+        className="fixed bottom-5 left-5 bg-[#4b2aad] w-[56px] h-[56px] z-30 cursor-pointer rounded-[50%] text-white flex justify-center items-center focus:outline-none "
+        color="#4b2aad"
+        onClick={() => setModal((value) => !value)}
+      >
+        {modal ? (
+          <MdClose className="text-3xl" />
+        ) : (
+          <IoChatbox className="text-3xl" />
+        )}
+      </Button>
 
-       
-        </Button>
-  
       <div>
         {modal && (
-          <div className="p-0 fixed left-0 lg:left-8 z-30 bottom-24 w-[100%] lg:w-[380px] lg:h-[430px] h-400px border border-solid border-gray-300 bg-white rounded-xl " onSubmit={HandleSubmit}>
+          <div
+            className="p-0 fixed left-0 lg:left-8 z-30 bottom-24 w-[100%] lg:w-[380px] lg:h-[430px] h-400px border border-solid border-gray-300 bg-white rounded-xl "
+            onSubmit={HandleSubmit}
+          >
             {/* <button
               className="close-btn-form"
               onClick={() => setModal((value) => !value)}
@@ -64,36 +71,43 @@ import { MdClose } from "react-icons/md";
               />
             </div> */}
             <div className="contact-us-header bg-[#4b2aad] text-white h-full max-h-[70px] shadow-xl p-4 rounded-t-xl">
-               <h5 className="text-2xl font-bold"> Contact Us</h5>
+              <h5 className="text-2xl font-bold"> Contact Us</h5>
             </div>
-          <div className="contact-us-body my-8 p-5">
-          <form className="" onSubmit={HandleSubmit}>
-
+            <div className="contact-us-body my-8 p-5">
+              <form className="" onSubmit={HandleSubmit}>
                 <TextInput
-                type="text"
-                name="name"
-                placeholder="Enter your name"
-               
-                required
-                onChange={(e) => handleChange(e)}
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                  onChange={(e) => handleChange(e)}
                 />
 
                 <TextInput
-                type="email"
-                name="email"
-                className="mt-3 outline-none"
-                placeholder="Enter your email"
-                required
-                onChange={(e) => handleChange(e)}
+                  type="email"
+                  name="email"
+                  className="mt-3 outline-none"
+                  placeholder="Enter your email"
+                  required
+                  onChange={(e) => handleChange(e)}
                 />
 
-                 <Textarea name="comment"  className="mt-3 resize-none" placeholder="Leave a comment..."  rows={4} />
+                <Textarea
+                  name="comment"
+                  className="mt-3 resize-none"
+                  placeholder="Leave a comment..."
+                  rows={4}
+                />
 
-                 <Button  type="submit" className="w-full bg-red-500 mt-4 text-white" color="dark-red">Submit</Button>
-
-                </form>
-          </div>
-
+                <Button
+                  type="submit"
+                  className="w-full bg-red-500 mt-4 text-white"
+                  color="dark-red"
+                >
+                  Submit
+                </Button>
+              </form>
+            </div>
           </div>
         )}
       </div>
@@ -101,5 +115,4 @@ import { MdClose } from "react-icons/md";
   );
 };
 
-export default Feedback
-
+export default Feedback;

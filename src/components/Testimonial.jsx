@@ -75,7 +75,7 @@ const Testimonial = () => {
   return (
     <>
       <section className=" py-24 bg-[#05435c] ">
-         <div className=" max-w-[100%] sm:max-w-[90%] mx-auto">
+         <div className="md:max-w-7xl mx-auto max-w-[100%] sm:w-[90%] ">
         <div className=" text-center mb-14">
         <h2 className="text-xl md:text-3xl text-white font-normal capitalize">Hear what our client says</h2>
         </div>

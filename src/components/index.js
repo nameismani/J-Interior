@@ -5,8 +5,9 @@ import FooterCom from "./Footer";
 import Header from "./Header";
 import About from "./About";
 import OurServicesComp from "./OurServicesComp";
-import MapContainer from './MapContainer'
+import MapContainer from './MapContainer';
+import Projects from "./Projects";
 
 
 
-export {Navbar,Testimonial,Feedback,FooterCom,Header,About,OurServicesComp,MapContainer}
+export {Navbar,Testimonial,Feedback,FooterCom,Header,About,OurServicesComp,MapContainer,Projects}

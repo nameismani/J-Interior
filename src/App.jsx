@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navbar,Testimonial,Feedback,FooterCom, Header, About, OurServicesComp, MapContainer } from './components'
+import { Navbar,Testimonial,Feedback,FooterCom, Header, About, OurServicesComp, MapContainer, Projects } from './components'
 
 
 
@@ -14,8 +14,9 @@ function App() {
     <Header/>
      <About/>
    <OurServicesComp/>
-   <Testimonial/>
-    <Feedback/>
+   <Projects/>
+   {/* <Testimonial/> */}
+    {/* <Feedback/> */}
    <MapContainer/>
     <FooterCom/>
     </>
