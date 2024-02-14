@@ -8,7 +8,7 @@ const OurServicesComp = () => {
   return (
     <section
       name="our service"
-      className="  pt-10 md:pt-24 pb-10  md:pb-24 text-black  text-3xl ourService bg-cover bg-no-repeat bg-center object-cover"
+      className="  pt-10 md:pt-24 pb-10  md:pb-24 text-black  text-3xl bg-ourservice bg-cover bg-no-repeat bg-center object-cover"
     >
       <div className=" max-w-7xl    mx-5 md:mx-3 xl:mx-auto flex-wrap flex justify-center items-center lg:items-start">
         <div className="service-content w-full lg:w-[30%] flex justify-start items-start flex-col mt-7">
@@ -24,8 +24,8 @@ const OurServicesComp = () => {
           >
             We Offer a Range of Services to Meet All Types of Needs...
           </motion.p>
-          <button className="p-2 text-xl  rounded-xl bg-[#FFB800] text-black capitalize">
-            ALL SERVICES
+          <button className="p-2 text-xl  rounded-xl bg-[#FFB800] text-black uppercase">
+            Our SERVICES
           </button>
         </div>
         <div className="service-image flex flex-wrap items-center justify-center gap-1 md:gap-3 mt-3  w-full lg:w-[66%]">

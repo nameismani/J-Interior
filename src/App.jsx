@@ -1,26 +1,25 @@
-import { useState } from 'react'
-import { Navbar,Testimonial,Feedback,FooterCom, Header, About, OurServicesComp, MapContainer, Projects } from './components'
-
-
-
-
+import {
+  Navbar,
+  FooterCom,
+  Header,
+  About,
+  OurServicesComp,
+  MapContainer,
+  Projects,
+} from "./components";
 
 function App() {
-
-
   return (
     <>
-    <Navbar/>
-    <Header/>
-     <About/>
-   <OurServicesComp/>
-   <Projects/>
-   {/* <Testimonial/> */}
-    {/* <Feedback/> */}
-   <MapContainer/>
-    <FooterCom/>
+      <Navbar />
+      <Header />
+      <About />
+      <OurServicesComp />
+      <Projects />
+      <MapContainer />
+      <FooterCom />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

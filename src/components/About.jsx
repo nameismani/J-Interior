@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../assets/images/about_image.jpg";
+import aboutImage from "../assets/images/jinterior_about_image.jpg";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -15,7 +15,7 @@ const About = () => {
     >
       <div className="md:max-w-7xl w-full h-full md:min-h-[370px] md:max-h-[420px] md:h-[420px] lg:min-h[420px] lg:max-h-[700px] lg:h-[604px]   flex-wrap flex items-center justify-center mx-auto">
         <div className="about-content mx-5 md:mx-3 xl:mx-0 h-full md:flex-1 w-full md:w-[48%]">
-          <h5 className=" text-xl md:text-2xl text-black font-semibold capitalize text-start">
+          <h5 className=" text-xl md:text-2xl text-black font-semibold capitalize text-start ">
             About Us
           </h5>
 
@@ -95,6 +95,8 @@ const About = () => {
             <img
               src={aboutImage}
               alt="about image"
+              title="About Image"
+              loading="lazy"
               className="w-full h-full rounded-xl"
             />
           </motion.div>

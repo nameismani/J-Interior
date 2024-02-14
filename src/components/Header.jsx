@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header
       name="header"
-      className="bg-gray-50 h-screen flex justify-center items-center text-3xl text-white header bg-cover bg-center object-cover"
+      className="bg-gray-50 h-screen flex justify-center items-center text-3xl text-white bg-header bg-cover bg-center object-cover"
     >
       <div className="px-3 py-5 md:p-8 rounded-xl bg-gradient-to-b from-[rgba(0,0,0,0.08)] to-[rgba(255,255,255,0)]">
         <motion.h4

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/images/jinterior_logo.png";
-import { Button } from "flowbite-react";
 import { FaBars } from "react-icons/fa";
 import { CgClose } from "react-icons/cg";
 import { Link } from "react-scroll";
@@ -21,7 +20,7 @@ const Navbar = () => {
   }, [nav.show, nav.scrollPos]);
 
   const handleScroll = () => {
-    //  console.log(document.body.getBoundingClientRect())
+    //  code to change the navbackground when it is scrolllength greater than 30
 
     if (window.scrollY >= 30) {
       setNavBackground(true);
@@ -31,10 +30,11 @@ const Navbar = () => {
     const scrollThreshold = 80;
     setOpenNav(false);
 
+    //  below functionality is to hide the nav when scrolling down and sow when scroll up
+    const newScrollPos = document.body.getBoundingClientRect().top;
+    const shouldShow =
+      newScrollPos > nav.scrollPos || newScrollPos > -scrollThreshold;
     setNav((prev) => {
-      const newScrollPos = document.body.getBoundingClientRect().top;
-      const shouldShow =
-        newScrollPos > nav.scrollPos || newScrollPos > -scrollThreshold;
       return {
         ...prev,
 
@@ -48,7 +48,6 @@ const Navbar = () => {
   };
   return (
     <>
-      {/* ${nav.show?'bg-white':' bg-[hsla(0,0%,100%,.45) backdrop-blur-[29.5px]  box-shadow:0_8px_32px_0_rgba(31,38,135,.37)'} */}
       <header
         className={`fixed top-0 w-full px-2 lg:px-0 h-[61px] shadow-xl ease-in-out z-50  ${
           navBackground
@@ -58,9 +57,13 @@ const Navbar = () => {
           nav.show ? "visible" : "invisible"
         }`}
       >
-        <div className={` ${navBackground?'md:max-w-7xl':'container lg:px-4' } transition-all duration-150 w-full mx-auto flex justify-between h-full items-center`}>
+        <div
+          className={` ${
+            navBackground ? "md:max-w-7xl" : "container lg:px-4"
+          } transition-all duration-150 w-full mx-auto flex justify-between h-full items-center`}
+        >
           <div className="flex justify-center items-center cursor-pointer">
-            <img src={logo} className="w-[56px] h-[51px] rounded-md me-3" />{" "}
+            <img src={logo} alt="Jinterior logo" title="logo" loading="lazy" className="w-[56px] h-[51px] rounded-md me-3" />{" "}
             <span
               className={`text-md font-Roxborough flex justify-center items-center  ${
                 navBackground
@@ -79,26 +82,26 @@ const Navbar = () => {
             </span>
           </div>
           <nav>
-            <div className="cursor-pointer lg:hidden" onClick={handleNavbar}>
-              {/* {openNav ? (
+          {/* p-2 border-2 ${
+                navBackground ? "border-black" : "border-white"
+              } */}
+            <div
+              className={`cursor-pointer  rounded-lg lg:hidden `}
+              onClick={handleNavbar}
+            >
+              {openNav ? (
                 <CgClose
                   className={`text-4xl ${
-                    navBackground ? "text-orange-400" : "text-white"
+                    navBackground ? "text-black" : "text-white"
                   } `}
                 />
               ) : (
                 <FaBars
                   className={`text-4xl ${
-                    navBackground ? "text-orange-400" : "text-white"
+                    navBackground ? "text-black" : "text-white"
                   } `}
                 />
-              )} */}
-
-
-  
-              <div className={` w-[27px] pointer h-[27px] m-14px overflow-visible relative z-50 `}>
-            <span className={`${navBackground?'bg-black after:bg-black before:bg-black':'bg-white before:bg-white after:bg-white'} block h-[4px] opacity-100 absolute ${nav.show?'duration-300 ease-in-out ':'duration 0 before:duration-0 after:duration-0'} before:block before:h-[4px] before:opacity-100 before:absolute before:duration-300 before:ease-in-out  after:block after:h-[4px]  after:absolute after:duration-300 after:ease-in-out before:content-[''] after:content-[''] left-0 top-3 w-7 before:right-0 before:-top-[10px] before:w-4 after:right-0 after:top-[10px] after:w-5 ${openNav?'-rotate-45 top-[13px]w-[27px] before:top-0 before:rotate-90 before:w-[27px] after:top-0 after:left-0 after:rotate-90 after:opacity-0 after:w-0  ':null} `}></span>
-               </div>
+              )}
             </div>
             <ul
               className={`fixed w-full nav  ${
@@ -108,10 +111,7 @@ const Navbar = () => {
               } capitalize overflow-hidden border-t top-[61px]
 items-center left-0 right-0 flex flex-col gap-4 lg:relative lg:flex-row lg:p-0 lg:top-0 lg:border-none lg:h-full text-white transition-[height] transiton-[background] duration-300`}
             >
-              {/* <li> About</li>
-               */}
               <li>
-                {" "}
                 <Link
                   to="about"
                   activeClass="active"
@@ -122,9 +122,7 @@ items-center left-0 right-0 flex flex-col gap-4 lg:relative lg:flex-row lg:p-0 l
                       : "[text-shadow:2px_2px_5px_var(--tw-shadow-color)] shadow-black "
                   } hover:text-[#CD9C4E] hover:font-bold cursor-pointer`}
                   smooth={true}
-                  //   offset={50}
                   duration={500}
-                  // style={{ textShadow: "2px 2px #f" }}
                 >
                   About
                 </Link>
@@ -146,15 +144,6 @@ items-center left-0 right-0 flex flex-col gap-4 lg:relative lg:flex-row lg:p-0 l
                   Services
                 </Link>
               </li>
-              {/* <li
-                className={`${
-                  navBackground
-                    ? "text-black"
-                    : "[text-shadow:2px_2px_5px_var(--tw-shadow-color)] shadow-black "
-                }`}
-              >
-                Clients
-              </li> */}
               <li>
                 <Link
                   to="project"
@@ -172,7 +161,6 @@ items-center left-0 right-0 flex flex-col gap-4 lg:relative lg:flex-row lg:p-0 l
                   Projects
                 </Link>
               </li>
-              {/* [text-shadow:2px_2px_5px_var(--tw-shadow-color)] shadow-black */}
               <li className="p-2  rounded-xl bg-[#FFB800] text-black">
                 <Link
                   to="contact"
@@ -181,9 +169,7 @@ items-center left-0 right-0 flex flex-col gap-4 lg:relative lg:flex-row lg:p-0 l
                   smooth={true}
                   duration={500}
                   className={`${
-                    navBackground
-                      ? "text-black"
-                      : "text-black "
+                    navBackground ? "text-black" : "text-black "
                   } cursor-pointer`}
                 >
                   Contact us

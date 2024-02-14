@@ -1,17 +1,9 @@
-import { Button, Footer } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { PiCaretUpBold } from "react-icons/pi";
 import { FaInstagram } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa6";
-import {
-  BsFacebook,
-  BsInstagram,
-  BsTwitter,
-  BsGithub,
-  BsDribbble,
-} from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { BsFacebook } from "react-icons/bs";
 const FooterCom = () => {
   const [backToTop, setBackToTop] = useState(false);
 
@@ -59,16 +51,15 @@ const FooterCom = () => {
           <div className="flex flex-wrap">
             <div className="flex-1 mb-3 lg:mb-0  px-4">
               <h4 className="text-xl text-white capitalize mb-5 lg:mb-9 font-medium relative before:content-[''] before:absolute before:left-0 before:-bottom-3 before:bg-[#FFB800] before:h-1 before:w-20">
-                <span className="font-Roxborough text-3xl text-[#CD9C4E]">J</span> Interior & wood works
+                <span className="font-Roxborough text-3xl text-[#CD9C4E]">
+                  J
+                </span>{" "}
+                Interior & wood works
               </h4>
-              {/* <address className="text-[#666] font-normal lg:font-medium lg:text-xl">
-                Opposite SV Mahal, 43, Swathi nagar,
-                <br />
-                Rajaji puram, ii, Tamil Nadu 602001
-                <br />
-                jaganinteriorwork@gmail.com
-              </address> */}
-              <h2 className="text-[#bbbbbb] font-normal font-Parisienne mt-9 lg:mt-0 mb-3 lg:mb-0 lg:font-medium lg:text-2xl"> Make your living space modern...</h2>
+              <h2 className="text-[#bbbbbb] font-normal font-Parisienne mt-9 lg:mt-0 mb-3 lg:mb-0 lg:font-medium lg:text-2xl">
+                {" "}
+                Make your living space modern...
+              </h2>
               <p></p>
             </div>
             <div className="w-full lg:w-1/6 px-4 mb-3 lg:mb-0">
@@ -108,7 +99,6 @@ const FooterCom = () => {
                     Contact us
                   </a>
                 </li>
-                {/* <li ><a href="#" className='capitalize text-[#bbbbbb] font-light transition-all duration-75 hover:text-white hover:ps-2'>payment options</a></li> */}
               </ul>
             </div>
 

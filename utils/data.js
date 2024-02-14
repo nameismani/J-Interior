@@ -1,10 +1,15 @@
-import image1 from '../src/assets/images/about_image.jpg';
-import image3 from '../src/assets/images/Tv_Units.jpg';
-import image2 from '../src/assets/images/Modualr_Kitchen.jpg';
-import poojaRoom from '../src/assets/images/Pooja_Room2.jpg';
-import tvUnit from '../src/assets/images/Tv_Units.jpg';
-import wardrobe from '../src/assets/images/Wardrobe.jpg';
-import furniture from '../src/assets/images/Furniture.jpg';
+// import image1 from '../src/assets/images/about_image.jpg';
+// import image3 from '../src/assets/images/Tv_Units.jpg';
+// import image2 from '../src/assets/images/Modualr_Kitchen.jpg';
+import poojaRoom from '../src/assets/images/jinterior_Pooja_Room2.jpg';
+import tvUnit from '../src/assets/images/jinterior_Tv_Units.jpg';
+import wardrobe from '../src/assets/images/jinterior_Wardrobe.jpg';
+import furniture from '../src/assets/images/jinterior_Furniture.jpg';
+import project1  from '../src/assets/images/jinterior_project1.jpg';
+import project2  from '../src/assets/images/jinterior_project2.jpg';
+import project3  from '../src/assets/images/jinterior_project3.jpg';
+import project4  from '../src/assets/images/jinterior_project4.jpg';
+
 
 
 
@@ -96,4 +101,32 @@ export const services = [
         backgroundImageUrl:furniture
        },
 
+]
+
+export const projects = [
+
+    {
+        id:1,
+        projectTitle:'Project1',
+        projectDesc:'This is a description of the first project',
+        imgUrl:project1
+    },
+    {
+        id:2,
+        projectTitle:'Project2',
+        projectDesc:'This is a description of the second project',
+        imgUrl:project2
+    },
+    {
+        id:3,
+        projectTitle:'Project3',
+        projectDesc:'This is a description of the third project',
+        imgUrl:project3
+    },
+    {
+        id:4,
+        projectTitle:'Project4',
+        projectDesc:'This is a description of the fourth project',
+        imgUrl:project4
+    }
 ]
